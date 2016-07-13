@@ -1,3 +1,5 @@
+local ver = "0.01"
+
 if FileExist(COMMON_PATH.."MixLib.lua") then
  require('MixLib')
 else
@@ -13,11 +15,14 @@ function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
         PrintChat('<font color = "#00FFFF">New version found! ' .. data)
         PrintChat('<font color = "#00FFFF">Downloading update, please wait...')
-        DownloadFileAsync('https://raw.githubusercontent.com/allwillburn/Jax/master/Jax.lua', SCRIPT_PATH .. 'Jax.lua', function() PrintChat('<font color = "#00FFFF">Update Complete, please 2x F6!') return end)
+        DownloadFileAsync('https://raw.githubusercontent.com/allwillburn/Hecarim/master/Hecarim.lua', SCRIPT_PATH .. 'Hecarim.lua', function() PrintChat('<font color = "#01DF01">Update Complete, please 2x F6!') return end)
     else
-        PrintChat('<font color = "#00FFFF">No updates found!')
+        PrintChat('<font color = "#01DF01">No updates found!')
     end
 end
+
+GetWebResultAsync("https://raw.githubusercontent.com/allwillburn/Hecarim/master/Hecarim.version", AutoUpdate)
+
 
 GetLevelPoints = function(unit) return GetLevel(unit) - (GetCastLevel(unit,0)+GetCastLevel(unit,1)+GetCastLevel(unit,2)+GetCastLevel(unit,3)) end
 local SetDCP, SkinChanger = 0
