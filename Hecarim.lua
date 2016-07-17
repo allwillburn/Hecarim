@@ -71,7 +71,6 @@ HecarimMenu.AutoIgnite:Boolean("Ignite", "Ignite if killable", true)
 HecarimMenu:SubMenu("Drawings", "Drawings")
 HecarimMenu.Drawings:Boolean("DQ", "Draw Q Range", true)
 HecarimMenu.Drawings:Boolean("DW", "Draw W Range", true)
-HecarimMenu.Drawings:Boolean("DE", "Draw E Range", true)
 HecarimMenu.Drawings:Boolean("DR", "Draw R Range", true)
 
 HecarimMenu:SubMenu("SkinChanger", "SkinChanger")
