@@ -97,7 +97,7 @@ OnTick(function (myHero)
                 if Mix:Mode() == "Harass" then
             if HecarimMenu.Harass.Q:Value() and Ready(_Q) and ValidTarget(target, 350) then
 				if target ~= nil then 
-                                      CastTargetSpell(target, _Q)
+                                      CastSpell(_Q)
                                 end
             end
             if HecarimMenu.Harass.W:Value() and Ready(_W) and ValidTarget(target, 525) then
@@ -113,7 +113,7 @@ OnTick(function (myHero)
 
             if HecarimMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 350) then
 				if target ~= nil then 
-                                      CastTargetSpell(target, _Q)
+                                      CastSpell(_Q)
                                 end
             end
             if HecarimMenu.Combo.Tiamat:Value() and Tiamat > 0 and Ready(Tiamat) and ValidTarget(target, 350) then
@@ -165,7 +165,7 @@ OnTick(function (myHero)
                 
                 if IsReady(_Q) and ValidTarget(enemy, 350) and HecarimMenu.KillSteal.Q:Value() and GetHP(enemy) < getdmg("Q",enemy) then
 		         if target ~= nil then 
-                                      CastTargetSpell(target, _Q)
+                                      CastSpell(_Q)
 		         end
                 end 
 
@@ -178,7 +178,7 @@ OnTick(function (myHero)
       if Mix:Mode() == "LaneClear" then
       	  for _,closeminion in pairs(minionManager.objects) do
 	        if HecarimMenu.LaneClear.Q:Value() and Ready(_Q) and ValidTarget(closeminion, 350) then
-	        	CastTargetSpell(closeminion, _Q)
+	        	CastSpell(_Q)
                 end
                 if HecarimMenu.LaneClear.W:Value() and Ready(_W) and ValidTarget(closeminion, 525) then
 	        	CastSpell(_W)
